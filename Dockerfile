@@ -6,8 +6,9 @@ RUN apk update && \
     apk add bind-tools && \
     apk add fish && \
     apk add docker && \
-    apk add httpie && \
     apk add nmap && \
+    apk add --no-cache python3 && \
+    pip3 install --upgrade pip setuptools httpie && \
     chmod a+x /usr/local/bin/weave
 
 CMD ["tail", "-f", "/dev/null"]

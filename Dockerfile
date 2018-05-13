@@ -1,6 +1,4 @@
-ARG BASE_VERSION
-FROM alpine:$BASE_VERSION
-
+FROM alpine:3.6
 ADD http://git.io/weave /usr/local/bin/weave
 
 RUN apk update && \
